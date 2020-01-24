@@ -8,6 +8,7 @@ public class MainLoops {
 
         int wynik = Tablica.getSum(numbers);
         System.out.println(wynik);
+        System.out.println(wynik);
 
     }
 }

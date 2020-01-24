@@ -7,6 +7,7 @@ public class Loops {
             sum = sum + num[i];
         }
         return sum;
+
     }
 
 
