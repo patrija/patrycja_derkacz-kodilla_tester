@@ -1,5 +1,6 @@
 public class Loops {
 
+
     public int getSum(int[] num) {
         int sum = 0;
 
