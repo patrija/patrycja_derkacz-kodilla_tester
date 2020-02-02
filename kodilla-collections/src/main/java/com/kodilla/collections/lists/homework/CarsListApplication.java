@@ -14,6 +14,7 @@ public class CarsListApplication {
         cars.add(new Honda(50, 30, 80));
         Honda honda3 = new Honda(20,10,50);
         cars.add(honda3);
+        cars.add(new Honda(35,10,90));
 
         for(Honda honda : cars) {
             CarUtils.describeCar(honda);
@@ -21,6 +22,7 @@ public class CarsListApplication {
         System.out.println("Po usunieciu");
         cars.remove(0);
         cars.remove(honda3);
+
 
         for(Honda honda : cars) {
             CarUtils.describeCar(honda);
