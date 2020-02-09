@@ -2,14 +2,11 @@ public class MainLoops {
 
     public static void main(String[] args) {
 
-        Loops Tablica = new Loops();
+        Loops loop = new Loops(4, 10);
+     //   int[] numbers = new int[] { 0, 5, 8};
 
-        int[] numbers = new int[] {2, 4, 5};
-
-        int wynik = Tablica.getSum(numbers);
-        System.out.println(wynik);
-        System.out.println(wynik);
-
+        loop.getSum();
+        System.out.println(loop.getSum());
     }
 }
 
