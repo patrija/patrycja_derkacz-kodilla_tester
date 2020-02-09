@@ -1,11 +1,24 @@
+import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
+
 public class Notebook {
     int weight;
     int price;
     int year;
+    int memory;
+
     public Notebook(int weight, int price, int year) {
         this.weight = weight;
         this.price = price;
         this.year = year;
+        this.memory = 500;
+    }
+
+    public Notebook(){
+        this.price = 1000;
+    }
+
+    public Notebook(int price){
+        this.memory = 500;
     }
 
     public void checkPrice(){

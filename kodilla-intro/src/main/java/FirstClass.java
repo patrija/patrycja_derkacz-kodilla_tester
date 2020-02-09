@@ -35,5 +35,7 @@ public class FirstClass {
         randomNotebook.checkPrice();
         randomNotebook.checkWeight();
         randomNotebook.checkYearAndPrice();
+
+        Notebook black = new Notebook();
     }
 }
