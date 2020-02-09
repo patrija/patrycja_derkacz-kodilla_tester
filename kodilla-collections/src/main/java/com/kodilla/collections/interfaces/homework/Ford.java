@@ -16,8 +16,8 @@ public class Ford implements Car {
 
     @Override
     public void increaseSpeed() {
-        actualSpeed =this.actualSpeed + this.speedUp;
-        System.out.println(actualSpeed);
+        this.actualSpeed =this.actualSpeed + this.speedUp;
+        System.out.println(this.actualSpeed);
     }
 
     @Override
