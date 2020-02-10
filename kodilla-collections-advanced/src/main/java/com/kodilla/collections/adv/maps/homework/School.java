@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private List<Double> school = new ArrayList<>();
+    private List<Integer> school = new ArrayList<>();
 
     private String schoolName;
 
-    public School(String schoolName, double... school) {
+    public School(String schoolName, int... school) {
         this.schoolName = schoolName;
-        for(double number : school)
+        for(int number : school)
             this.school.add(number);
     }
 
-    public double getSum() {
-        double licznik = 0;
-        for(double num : school)
+    public int getSum() {
+        int licznik = 0;
+        for(int num : school)
             licznik = licznik + num;
         return licznik;
     }
@@ -28,7 +28,7 @@ public class School {
                 '}';
     }
 
-    public List<Double> getSchool() {
+    public List<Integer> getSchool() {
         return school;
     }
 
