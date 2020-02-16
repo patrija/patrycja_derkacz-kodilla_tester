@@ -14,26 +14,28 @@ public class BookManager {
     }
 
     public Book createBook(String title, String author) {
-        Book temp = new Book(title, author);
-        System.out.println(temp.getTitle());
-        System.out.println(books.size());
-       // if (books.size() == 0) {
-      //      addBookToCollection(temp);
+        Book tempBook = new Book(title, author);
+        System.out.println("Dodaje ksiazke");
+        System.out.println(tempBook);
+        if (books.size() == 0) {
+            addBookToCollection(tempBook);
+        }
        //     System.out.println();
        // }
 
-        for (Book book : books) {
-            if (temp.equals(books)) {
+        for (Book bookElement : books) {
+            if (tempBook.equals(bookElement)) {
             } else {
-                addBookToCollection(temp);
+                addBookToCollection(tempBook);
             }
+
         }
-        return temp;
+        return tempBook;
     }
 
-  public List<Book> getBooks() {
+    public List<Book> getBooks() {
         return books;
-  }
+    }
 }
 
 

@@ -5,12 +5,12 @@ import java.util.List;
 
 public class BookApplication {
     public static void main(String[] args) {
-        BookManager book = new BookManager();
+        BookManager bookManager = new BookManager();
 
-        Book book1 = book.createBook("Harry Potter", "J.K.Rowling");
-        Book book2 = book.createBook("W pustyni i w puszczy", "Henryk Sienkieiwcz");
-        Book book3 = book.createBook("Pan Tadeusz", "Adam Mickieiwcz");
-        Book book4 = book.createBook("Pan Tadeusz", "Adam Mickieiwcz");
+        Book book1 = bookManager.createBook("Harry Potter", "J.K.Rowling");
+        Book book2 = bookManager.createBook("W pustyni i w puszczy", "Henryk Sienkieiwcz");
+        Book book3 = bookManager.createBook("Pan Tadeusz", "Adam Mickieiwcz");
+        Book book4 = bookManager.createBook("Pan Tadeusz", "Adam Mickieiwcz");
 
 
         System.out.println(book1.hashCode());
@@ -18,7 +18,7 @@ public class BookApplication {
         System.out.println(book3.hashCode());
         System.out.println(book4.hashCode());
 
-        //System.out.println(book.getBooks());
+        System.out.println(bookManager.getBooks());
 
 
     }
