@@ -5,14 +5,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class FlightFinder {
-    List<Flight> flightTable;
-    FlightRepository repository = new FlightRepository();
 
-    public FlightFinder() {
-        this.flightTable = repository.getFlightTable();
-    }
+   FlightRepository repository = new FlightRepository();
 
     public List<Flight> findFlightsFrom(String departure) {
+        List<Flight> flightTable = repository.getFlightTable();
         List<Flight> result = new ArrayList<>();
         for(Flight flightElement : flightTable) {
             if (departure.equals(flightElement.getDeparture())) {
@@ -24,6 +21,7 @@ public class FlightFinder {
 
     public List<Flight> findFlightsTo(String arrival) {
         List<Flight> result = new ArrayList<>();
+        List<Flight> flightTable = repository.getFlightTable();
         for (Flight flightElement : flightTable) {
             if (arrival.equals(flightElement.getArrival())){
                 result.add(flightElement);
