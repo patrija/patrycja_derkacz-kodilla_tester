@@ -40,10 +40,10 @@ public class Shop {
 
      */
 
-    public  List getListOfOrdersWithinRangeOfDates(LocalDate date1, LocalDate date2){
+    public  List getListOfOrdersWithinRangeOfDates(LocalDate startDate, LocalDate endDate){
         List<Order> result = new ArrayList<>();
         for (Order orderElement : orders) {
-            if ((orderElement.getDate().isAfter(date1) || orderElement.getDate().isEqual(date1)) && (orderElement.getDate().isBefore(date2) || orderElement.getDate().isEqual(date2))) {
+            if ((orderElement.getDate().isAfter(startDate) || orderElement.getDate().isEqual(startDate)) && (orderElement.getDate().isBefore(endDate) || orderElement.getDate().isEqual(endDate))) {
                 result.add(orderElement);
             }
         }
