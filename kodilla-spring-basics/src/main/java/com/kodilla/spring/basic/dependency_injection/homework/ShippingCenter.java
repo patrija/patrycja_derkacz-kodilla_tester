@@ -3,17 +3,17 @@ package com.kodilla.spring.basic.dependency_injection.homework;
 public class ShippingCenter {
 
     private DeliveryService deliveryService;
-    private NotificationService notificationService;
+    private Notification notification;
 
-    public ShippingCenter(DeliveryService deliveryService, NotificationService notificationService) {
+    public ShippingCenter(DeliveryService deliveryService, Notification notification) {
         this.deliveryService = deliveryService;
-        this.notificationService = notificationService;
+        this.notification = notification;
     }
 
     public void sendPackage(String address, double weight) {
         if (deliveryService.deliverPackage(address, weight)) {
-            notificationService.success(address);
+            notification.success(address);
         }
-        else notificationService.fail(address);
+        else notification.fail(address);
     }
 }
