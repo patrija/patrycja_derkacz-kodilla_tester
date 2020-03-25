@@ -15,7 +15,7 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldReturnSuvForWinter() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "winter", LocalTime.of(12,0));
+        Car car = (Car) context.getBean("returnCar", "winter");
 
         String carType = car.getCarType();
         System.out.println(carType);
@@ -26,7 +26,7 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldReturnSedanForSpring(){
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "spring", LocalTime.of(12,0));
+        Car car = (Car) context.getBean("returnCar", "spring");
 
         String carType = car.getCarType();
 
@@ -36,7 +36,7 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldReturnCabrioForSummer() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "summer", LocalTime.of(22,0));
+        Car car = (Car) context.getBean("returnCar", "summer");
 
         String carType = car.getCarType();
 
@@ -46,7 +46,7 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldReturnSedanForAutumn(){
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "autumn", LocalTime.of(12,0));
+        Car car = (Car) context.getBean("returnCar", "autumn");
 
         String carType = car.getCarType();
 
@@ -56,7 +56,7 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldTurnOnLights() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "summer", LocalTime.of(22,0));
+        Car car = (Car) context.getBean("returnCar", "autumn");
 
         boolean checkLights = car.hasHeadlightsTurnedOn(LocalTime.of(22,0));
 
@@ -66,13 +66,10 @@ public class CarFactoryTestSuite {
     @Test
     public void shouldTurnOffLights() {
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
-        Car car = (Car) context.getBean("returnCar", "summer", LocalTime.of(14,0));
+        Car car = (Car) context.getBean("returnCar", "autumn");
 
         boolean checkLights = car.hasHeadlightsTurnedOn(LocalTime.of(14,0));
 
         Assertions.assertFalse(checkLights);
     }
-
-
-
 }

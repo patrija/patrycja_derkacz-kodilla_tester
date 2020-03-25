@@ -4,14 +4,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import java.time.LocalTime;
-
 @Configuration
 public class CarFactory {
 
     @Bean
     @Scope(value = "prototype")
-    public Car returnCar(String season, LocalTime hour) {
+    public Car returnCar(String season) {
         Car car;
         if(season.equals("winter")){
             car = new SUV();
@@ -21,10 +19,7 @@ public class CarFactory {
             car = new Sedan();
         } else
             car = null;
-        if(car.hasHeadlightsTurnedOn(hour)){
-            System.out.println("Light is turned on");
-        } else
-            System.out.println("Light is turned off");
+
         return car;
     }
 }
