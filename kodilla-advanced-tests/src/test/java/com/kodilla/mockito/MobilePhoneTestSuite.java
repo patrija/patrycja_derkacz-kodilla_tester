@@ -8,9 +8,8 @@ public class MobilePhoneTestSuite {
 
     MobilePhone myPhone = Mockito.mock(MobilePhone.class);
 
-
     @Test
-    public void testDefaultBehaviourOfTestDouble(){
+    public void testDefaultBehaviorOfTestDouble(){
         Assertions.assertFalse(myPhone.needsCharging());
         Assertions.assertEquals(0.0, myPhone.getFreeStorage());
     }
@@ -22,12 +21,10 @@ public class MobilePhoneTestSuite {
         Assertions.assertTrue(myPhone.needsCharging());
     }
 
-
     @Test
-    public void shouldLaunchApplication(){
-        myPhone.launchApplication("Tetris4D");
-        Mockito.verify(myPhone).launchApplication("Tetris4D");
-
-
+    public void shouldCallLaunchApplication(){
+        myPhone.launchApplication("Tetris 4D");
+        Mockito.verify(myPhone).launchApplication("Tetris 4D");
     }
 }
+
