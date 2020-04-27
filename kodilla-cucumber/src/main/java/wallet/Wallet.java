@@ -12,11 +12,11 @@ public class Wallet {
 
     }
     public int getBalance() {
-        return balance;
+        return this.balance;
     }
 
     public void withdrawBalance(int amount) {
-        this.balance =- amount;
+        this.balance -= amount;
         if(this.balance < 0)
             this.balance =0;
     }
