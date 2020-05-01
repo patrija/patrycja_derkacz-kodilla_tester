@@ -1,0 +1,14 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP-ENV:Header/>
+    <SOAP-ENV:Body>
+        <ns2:getBookResponse xmlns:ns2="http://kodilla.com/courses/soap">
+            <ns2:book>
+                <ns2:signature>125</ns2:signature>
+                <ns2:title>Bajki robotow</ns2:title>
+                <ns2:author>Stanislaw Lem</ns2:author>
+                <ns2:yearOfPublication>2012</ns2:yearOfPublication>
+                <ns2:genre>SCI-FI</ns2:genre>
+            </ns2:book>
+        </ns2:getBookResponse>
+    </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
