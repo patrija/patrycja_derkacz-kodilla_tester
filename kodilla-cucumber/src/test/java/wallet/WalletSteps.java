@@ -16,11 +16,14 @@ public class WalletSteps implements En {
         });
 
         When("I requested $30", () -> {
+
             teller.withdraw(wallet, 30);
+
         });
 
         Then("$30 should be dispensed", () -> {
             Assert.assertEquals(30, cashSlot.getContents());
+
         });
 
 
@@ -62,9 +65,5 @@ public class WalletSteps implements En {
         Then("$500 should be dispensed", () -> {
            Assert.assertEquals(500, cashSlot.getContents());
         });
-
-
-
-
     }
 }
