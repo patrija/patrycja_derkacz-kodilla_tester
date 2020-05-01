@@ -12,7 +12,7 @@ public class GoogleExample {
         driver.get("https://www.google.com");
 
         WebElement inputField = driver.findElement(By.name("q"));
-        inputField.sendKeys("Kodilla");
+        inputField.sendKeys("drzewo produktu");
         inputField.submit();
 
     }
