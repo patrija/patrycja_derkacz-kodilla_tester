@@ -2,11 +2,12 @@ package com.kodilla.spring.basic.spring_scopes;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@SpringBootApplication
+
+@SpringBootTest
 public class TaskTestSuite {
 
     @Test
